@@ -5,10 +5,11 @@
   "keywords": [],
   "author": "Muhammed K K <ajumell@gmail.com>",
   "repository": { "type": "git", "url": "git://github.com/ajumell/coffee-join.git" },
-  "dependencies": {},
+  "dependencies": {
+      "coffee-script": "*",
+      "source-map": "*"
+  },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
   },
   "main": "index"
 }
