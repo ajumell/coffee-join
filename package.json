@@ -1,7 +1,7 @@
 {
     "name" : "coffee-join",
 
-    "version" : "0.0.1",
+    "version" : "0.1.0",
 
     "description" : "Multifile coffee script compilation with source map support.",
 
@@ -16,7 +16,8 @@
     "dependencies" : {
         "coffee-script" : "*",
         "source-map" : "*",
-        "colors" : "*"
+        "colors" : "*",
+        "optimist": "*"
     },
     "devDependencies" : {
     },
