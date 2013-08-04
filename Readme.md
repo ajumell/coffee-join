@@ -10,7 +10,7 @@ npm install coffee-join -g
 
 # Usage
 
-coffee-join -o output-file.js input-1.coffee input-2.coffee input-3.coffee input-4.coffee
+    coffee-join -o output-file.js input-1.coffee input-2.coffee input-3.coffee input-4.coffee
 
 This will generate output-file.js and output-file.map
 
