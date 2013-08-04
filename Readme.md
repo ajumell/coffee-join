@@ -2,11 +2,11 @@
 
 # coffee-join
 
-    coffee-join is an altrnative to coffee --compile --join but with source map support.
+coffee-join is an altrnative to coffee --compile --join but with source map support.
 
 # Install
 
-npm install coffee-join -g
+    npm install coffee-join -g
 
 # Usage
 
