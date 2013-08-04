@@ -1,7 +1,18 @@
+[![Build Status](https://travis-ci.org/ajumell/coffee-join.png?branch=master)](https://travis-ci.org/ajumell/coffee-join)
 
 # coffee-join
 
-  Multifile coffee script compilation with source map support.
+  coffee-join is an altrnative to coffee --compile --join but with source map support.
+
+# Install
+
+npm install coffee-join -g
+
+# Usage
+
+coffee-join -o output-file.js input-1.coffee input-2.coffee input-3.coffee input-4.coffee
+
+This will generate output-file.js and output-file.map
 
 ## License 
 
