@@ -1,16 +1,29 @@
 {
-  "name": "coffee-join",
-  "version": "0.0.1",
-  "description": "Multifile coffee script compilation with source map support.",
-  "keywords": [],
-  "author": "Muhammed K K <ajumell@gmail.com>",
-  "repository": { "type": "git", "url": "git://github.com/ajumell/coffee-join.git" },
-  "dependencies": {
-      "coffee-script": "*",
-      "source-map": "*",
-      "colors": "*"
-  },
-  "devDependencies": {
-  },
-  "main": "index"
+    "name" : "coffee-join",
+
+    "version" : "0.0.1",
+
+    "description" : "Multifile coffee script compilation with source map support.",
+
+    "keywords" : [],
+
+    "author" : "Muhammed K K <ajumell@gmail.com>",
+
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/ajumell/coffee-join.git"
+    },
+    "dependencies" : {
+        "coffee-script" : "*",
+        "source-map" : "*",
+        "colors" : "*"
+    },
+    "devDependencies" : {
+    },
+
+    "bin" : {
+        "coffee-join" : "js/cmd.js"
+    },
+
+    "main" : "index"
 }
