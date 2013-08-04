@@ -3,3 +3,4 @@ test
 examples
 *.sock
 tests
+src
