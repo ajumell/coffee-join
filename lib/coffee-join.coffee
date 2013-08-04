@@ -1,5 +1,5 @@
 coffeeScript = require("coffee-script")
-{print, relative, dirname, read} = require("./utils")
+{print, relative, dirname, read, basename} = require("./utils")
 {SourceMapConsumer, SourceMapGenerator} = require('source-map')
 colors = require("colors")
 
@@ -62,6 +62,7 @@ concat_files = (files) ->
     return {code, map, line_number_mapping}
 
 process = (files, output) ->
+    output = basename(output, ".js")
     out_js_file = output + ".js"
     out_map_file = output + ".map"
 
