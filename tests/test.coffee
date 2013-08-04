@@ -1,4 +1,4 @@
-coffeeJoin = require("../lib/coffee-join")
+coffeeJoin = require("../src/coffee-join")
 
 main = () ->
     files = [
