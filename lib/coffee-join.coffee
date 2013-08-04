@@ -66,7 +66,7 @@ process = (files, output) ->
     out_js_file = output + ".js"
     out_map_file = output + ".map"
 
-    {code, map, line_number_mapping} = coffeeJoin.concat_files(files)
+    {code, map, line_number_mapping} = concat_files(files)
     {sourceMap, code} = re_order_source_map(line_number_mapping, map, out_js_file, out_map_file, code)
 
     write(out_js_file, code)
