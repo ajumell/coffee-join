@@ -61,4 +61,14 @@ concat_files = (files) ->
         process.exit(1)
     return {code, map, line_number_mapping}
 
-module.exports = {compile, concat_files, re_order_source_map}
+process = (files, output) ->
+    out_js_file = output + ".js"
+    out_map_file = output + ".map"
+
+    {code, map, line_number_mapping} = coffeeJoin.concat_files(files)
+    {sourceMap, code} = re_order_source_map(line_number_mapping, map, out_js_file, out_map_file, code)
+
+    write(out_js_file, code)
+    write(out_map_file, sourceMap)
+
+module.exports = {compile, concat_files, re_order_source_map, process}
