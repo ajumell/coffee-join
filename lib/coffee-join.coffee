@@ -1,5 +1,5 @@
 coffeeScript = require("coffee-script")
-{print, relative, dirname, read, basename} = require("./utils")
+{print, relative, dirname, read, write, basename} = require("./utils")
 {SourceMapConsumer, SourceMapGenerator} = require('source-map')
 colors = require("colors")
 
