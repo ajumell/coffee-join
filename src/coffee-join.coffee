@@ -57,7 +57,7 @@ concat_files = (files) ->
         {code, map} = compile(source, "main.coffee", no)
     catch ex
         print "Error occured while compiling coffeescript.".red
-        print source
+        print ex.stack
         process.exit(1)
     return {code, map, line_number_mapping}
 
