@@ -61,7 +61,7 @@ concat_files = (files) ->
         process.exit(1)
     return {code, map, line_number_mapping}
 
-process = (files, output) ->
+process_files = (files, output) ->
     output = basename(output, ".js")
     out_js_file = output + ".js"
     out_map_file = output + ".map"
@@ -72,4 +72,4 @@ process = (files, output) ->
     write(out_js_file, code)
     write(out_map_file, sourceMap)
 
-module.exports = {compile, concat_files, re_order_source_map, process}
+module.exports = {compile, concat_files, re_order_source_map, process_files}
