@@ -1,5 +1,5 @@
 coffeeScript = require("coffee-script")
-{print, relative, dirname, read, write, basename} = require("./utils")
+{print, relative, dirname, read, write, basename, join} = require("./utils")
 {SourceMapConsumer, SourceMapGenerator} = require('source-map')
 colors = require("colors")
 
@@ -57,14 +57,15 @@ concat_files = (files) ->
         {code, map} = compile(source, "main.coffee", no)
     catch ex
         print "Error occured while compiling coffeescript.".red
-        print source
+        print ex.stack
         process.exit(1)
     return {code, map, line_number_mapping}
 
-process = (files, output) ->
-    output = basename(output, ".js")
-    out_js_file = output + ".js"
-    out_map_file = output + ".map"
+process_files = (files, output) ->
+    dir = dirname(output)
+    base = basename(output, ".js")
+    out_js_file = join(dir, base + ".js")
+    out_map_file = join(dir, base + ".map")
 
     {code, map, line_number_mapping} = concat_files(files)
     {sourceMap, code} = re_order_source_map(line_number_mapping, map, out_js_file, out_map_file, code)
@@ -72,4 +73,4 @@ process = (files, output) ->
     write(out_js_file, code)
     write(out_map_file, sourceMap)
 
-module.exports = {compile, concat_files, re_order_source_map, process}
+module.exports = {compile, concat_files, re_order_source_map, process_files}

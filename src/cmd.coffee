@@ -20,7 +20,7 @@ main = () ->
 
     input_files = argv._
 
-    coffeeJoin.process(input_files, argv['o'])
+    coffeeJoin.process_files(input_files, argv['o'])
 
 if require.main is module
     main()
